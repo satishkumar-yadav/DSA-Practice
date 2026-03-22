@@ -1,0 +1,56 @@
+
+/*
+ * link - https://www.geeksforgeeks.org/problems/reverse-an-array/1
+ * Difficulty : Basic
+
+  You are given an array of integers arr[]. You have to reverse the given array.
+
+  Note: Modify the array in place.
+
+  Constraints: 
+   1 <= arr.size()<= 10^5
+   1 <= arr[i] <= 10^5
+  
+  Examples:
+    1.
+    Input: arr = [1, 4, 3, 2, 6, 5]
+    Output: [5, 6, 2, 3, 4, 1]
+    Explanation: The elements of the array are [1, 4, 3, 2, 6, 5]. After reversing the array, the first element goes to the last position, the second element goes to the second last position and so on. Hence, the answer is [5, 6, 2, 3, 4, 1].
+
+    2.
+    Input: arr = [4, 5, 2]
+    Output: [2, 5, 4]
+    Explanation: The elements of the array are [4, 5, 2]. The reversed array will be [2, 5, 4].
+
+    3.
+    Input: arr = [1]
+    Output: [1]
+    Explanation: The array has only single element, hence the reversed array is same as the original.
+ 
+ */
+
+
+package Arr1;
+
+public class ReverseArray4 {
+    public static int[] reverseArray(int arr[]) {
+       int left=0;
+       int right=arr.length-1;
+
+       while(left<=right)
+       {
+          // int temp = arr[left];
+          // arr[left] = arr[right];
+          // arr[right] = temp;
+
+         arr[left]=arr[left]^arr[right];
+         arr[right] = arr[left] ^ arr[right];
+         arr[left] = arr[left] ^ arr[right];
+         left++;
+         right--;
+       }
+
+       return arr;
+    }
+
+}
