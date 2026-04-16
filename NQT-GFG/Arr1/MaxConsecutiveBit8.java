@@ -24,14 +24,18 @@
     Input: arr[] = [0, 0, 0, 0]
     Output: 4
     Explanation: The maximum number of consecutive 0’s in the array is 4.
+
+    //dry run 
  
  */
 
-package Arr1;
+
 
 public class MaxConsecutiveBit8 {
     public int maxConsecBits(int[] arr) {
         // code here
+    
 
+        return 0;
     }
 }

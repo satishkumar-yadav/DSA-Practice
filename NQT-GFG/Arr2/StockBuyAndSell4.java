@@ -34,11 +34,41 @@ Note: Stock must be bought before being sold.
 
  */
 
-package Arr2;
+
 
 public class StockBuyAndSell4 {
     public int maxProfit(int[] prices) {
-        // Code here
+      int n = prices.length;
+      int minPrice = Integer.MAX_VALUE;
+      int maxprofit = 0;
+      for (int i = 0; i < n; i++) {
+        if (prices[i] < minPrice)
+          minPrice = prices[i];
+        else {
+          int currentProfit = prices[i] - minPrice;
+          if (currentProfit > maxprofit)
+            maxprofit = currentProfit;
+        }
 
+      }
+      return maxprofit;
+
+      // int i=0, j=i+1;
+      // while(i<prices.length-1 && j<prices.length && prices[j]>prices[i]){
+      // int gap = prices[j]-prices[i];
+      // if(gap>max) max=gap;
+
+      // }
+
+      // O(n^2)
+      // int max=Integer.MIN_VALUE;
+      // for(int i=0; i<n-1; i++){
+      // for(int j=i+1; j<n; j++){
+      // int gap = prices[j]-prices[i];
+      // if(gap>max) max=gap;
+      // }
+      // }
+      // if(max>0) return max;
+      // else return 0;
     }
 }
