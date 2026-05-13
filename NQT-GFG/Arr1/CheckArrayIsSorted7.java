@@ -22,11 +22,18 @@
 
  */
 
-package Arr1;
-
 public class CheckArrayIsSorted7 {
-    public boolean isSorted(int[] arr) {
-        // code here
+    public static boolean isSorted(int[] arr) {
+        boolean flag = true;
+        for(int i=1; i<arr.length; i++){
+           if(arr[i]<arr[i-1]) flag=false;
+        }
+       return flag;
+    }
 
+    public static void main(String[] args) {
+        int arr[] = {10, 20, 30, 40, 50};
+
+        System.out.println(isSorted(arr));
     }
 }
