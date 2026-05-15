@@ -28,8 +28,37 @@
 import java.util.ArrayList;
 
 public class FirstAndSecondSmallest {
-    public ArrayList<Integer> minAnd2ndMin(int[] arr) {
-        // code here
-        
+    public static ArrayList<Integer> minAnd2ndMin(int[] arr) {
+        ArrayList<Integer> list = new ArrayList<>();
+        int min = Integer.MAX_VALUE;
+        int secMin = Integer.MAX_VALUE;
+
+        for (Integer n : arr) {
+            if(n<min){
+                secMin = min;
+                min = n;
+            }
+            else if(n>min && n<secMin) secMin=n; 
+        }
+
+        if(secMin!=Integer.MAX_VALUE){
+            list.add(min);
+            list.add(secMin);
+        }
+        else list.add(-1);
+
+        return list;
+    }
+
+    public static void main(String[] args) {
+        // int arr[] = {2,4,3,5,6};
+        int arr[] = {1,1,1};
+
+        // ArrayList<Integer> ls = minAnd2ndMin(arr);
+
+        // System.out.println(ls);
+
+         System.out.println(minAnd2ndMin(arr));
+
     }
 }
