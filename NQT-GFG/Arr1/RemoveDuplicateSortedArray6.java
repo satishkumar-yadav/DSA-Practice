@@ -25,13 +25,34 @@
 
  */
 
-package Arr1;
-
 import java.util.ArrayList;
 
 public class RemoveDuplicateSortedArray6 {
-    ArrayList<Integer> removeDuplicates(int[] arr) {
-        // code here
-        
+   static ArrayList<Integer> removeDuplicates(int[] arr) {
+        ArrayList<Integer> list = new ArrayList<>();
+       // edge case 
+       if(arr.length==0){
+        return list;
+       }
+
+       //add first element
+       list.add(arr[0]);
+
+       for (int i = 1; i < arr.length; i++) {
+         if(arr[i] != arr[i-1]){
+            list.add(arr[i]);
+         }
+       }
+
+        return list;
+    }
+
+
+    public static void main(String[] args) {
+       // int arr[] = {2,2,2,2,9,2,3,7,2,9,3,5};
+        int arr[] = {10, 23, 23, 27, 27, 32, 37, 48, 54, 66, 66, 90, 91, 91};
+
+        System.out.println(removeDuplicates(arr));
+
     }
 }

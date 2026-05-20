@@ -29,13 +29,11 @@
  
  */
 
-
-
 public class MaxConsecutiveBit8 {
     public int maxConsecBits(int[] arr) {
         // code here
     
 
-        return 0;
+       
     }
 }

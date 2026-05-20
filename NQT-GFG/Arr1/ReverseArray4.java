@@ -29,9 +29,6 @@
  
  */
 
-
-package Arr1;
-
 public class ReverseArray4 {
     public static int[] reverseArray(int arr[]) {
        int left=0;

@@ -21,8 +21,6 @@
  
  */
 
-  package Arr1;
-
   public class SumOfArray1 
   {
     public  int arraySum(int arr[]) {

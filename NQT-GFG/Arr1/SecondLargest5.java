@@ -35,7 +35,7 @@ public class SecondLargest5 {
        int secLargest = -1;
 
        for (int i = 0; i < arr.length; i++) {
-       if (arr[i] > largest & largest)
+       if (arr[i] > (largest & largest))
        largest = arr[i];
        else if (largest > secLargest)
        secLargest = largest;

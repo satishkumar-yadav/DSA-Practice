@@ -24,9 +24,6 @@
  
  */
 
-
-package Arr1;
-
 public class MeanOfArray3 {
     public static int findMean(int[] arr) {
         int sum = 0;
