@@ -30,10 +30,33 @@
  */
 
 public class MaxConsecutiveBit8 {
-    public int maxConsecBits(int[] arr) {
-        // code here
-    
+    public static int maxConsecBits(int[] arr) {
+        int max = 1;
+        int i=0, j=i+1;
 
-       
+        while (i<arr.length-1 && j<arr.length) {
+            System.out.println("i: "+i+" , j: "+j);
+            int count =1;
+            while(arr[i]==arr[j]){
+                count++;
+                j++;
+                System.out.println("inside");
+                System.out.println("i: " + i + " , j: " + j);
+            }
+            if(count>max) max=count;
+            i=j;
+            //j=i+1;
+            System.out.println("last");
+            System.out.println("i: " + i + " , j: " + j);
+        }
+        return max;
+    }
+
+    public static void main(String[] args) {
+      //  int arr[] = {0,0,1,0,1,0}; 
+         int arr[] = {0,1,0,1,1,1,1};
+        // int arr[] = {0,0,0,0};
+        
+        System.out.println(maxConsecBits(arr));
     }
 }
