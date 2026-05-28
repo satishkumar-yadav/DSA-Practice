@@ -30,13 +30,59 @@ import java.util.Set;
 public class ContainsDuplicateII {
 
     // time limit exceed
-    public static boolean containsNearbyDuplicate2(int[] nums, int k) {
+    public static boolean containsNearbyDuplicate3(int[] nums, int k) {
           for (int i = 0; i < nums.length-1; i++) {
             for (int j = i+1; j < nums.length; j++) {
                if(nums[i]==nums[j] && (Math.abs(i-j)<=k)) return true;                
             }
           }
           return false;
+    }
+
+    //TLE  , k=612     
+    public static boolean containsNearbyDuplicate4(int[] nums, int k) {
+       int i=0, j=i+1;
+       while(i<nums.length-1 && j<nums.length){
+        if(nums[i]==nums[j] && (Math.abs(i-j)<=k)) return true;
+        if(j<nums.length-1) j++;
+        else {
+            i++;
+            j=i+1;
+        }
+       }
+       return false;
+    } 
+    
+    // Sliding Window + HashSet
+    public static boolean containsNearbyDuplicate2(int[] nums, int k){
+         // Initialize the HashSet for the window
+        HashSet<Integer> window = new HashSet<>();
+
+        // Initialize the left variable
+        int left = 0;
+
+        // Iterate over the nums array
+        for (int right = 0; right < nums.length; right++) {
+            // If window is bigger then the k then update the set and the left variable
+            if (right - left > k) {
+                // If window is bigger than the k then remove the nums[left] from the window
+                window.remove(nums[left]);
+
+                // Increment the left variable
+                left++;
+            }
+
+            // If window contain nums[right] then return true
+            if (window.contains(nums[right])) {
+                return true;
+            }
+
+            // Add the nums[right] to the set
+            window.add(nums[right]);
+        }
+
+        // Retrun the false in the end
+        return false;
     }
 
     public static boolean containsNearbyDuplicate(int[] nums, int k) {
@@ -63,5 +109,6 @@ public class ContainsDuplicateII {
         int k=1;
 
         System.out.println(containsNearbyDuplicate(nums, k));
+        System.out.println("2: "+containsNearbyDuplicate2(nums, k));
     }
 }
