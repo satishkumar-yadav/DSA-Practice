@@ -21,9 +21,22 @@ public class ReverseVowelOfString {
 
        int l=0;
        int r=ls.size();
-       while(l<r){
-         sb.charAt(l) = s.charAt(r);
+       for (int i : ls) {
+         sb.setCharAt(i, s.charAt(r));
+         sb.setCharAt(r, s.charAt(i));
+         l++;
+         r--;
        }
+
+       
+        // while(l<r){
+        //     sb.setCharAt(ls.get(), s.charAt(r));
+        //     sb.setCharAt(r, s.charAt(l));
+        //   l++;
+        //   r--;
+        // }
+
+       return sb.toString();
     }
 
     public static void main(String[] args) {
