@@ -2,7 +2,7 @@
 
 */
 
-public class ViralAdvertising {
+public class ViralAdvertising33 {
     public static int viralAdvertising(int n) {
         int shared=0, liked=0, cumulative=0;
         for (int i = 1; i <=n; i++) { //i=day

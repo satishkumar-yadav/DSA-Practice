@@ -3,7 +3,7 @@
 
 */
 
-public class GameOfStones {
+public class GameOfStones35 {
     public static String gameOfStones(int n) {
         if (n < 2)
             return "Second";

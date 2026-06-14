@@ -1,6 +1,6 @@
 
 
-public class BeautifulDaysAtTheMovies {
+public class BeautifulDaysAtTheMovies39 {
     public static int beautifulDays(int i, int j, int k) {
        int count =0; 
        

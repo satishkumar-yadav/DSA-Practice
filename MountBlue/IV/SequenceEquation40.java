@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class SequenceEquation {
+public class SequenceEquation40 {
     public static List<Integer> permutationEquation2(List<Integer> p) {
        List<Integer> res = new ArrayList<>();
           for (int i = 1; i < p.size(); i++) {

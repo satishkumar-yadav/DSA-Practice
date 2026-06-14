@@ -1,6 +1,6 @@
 import java.util.Stack;
 
-public class CountingValleys {
+public class CountingValleys21 {
 
     //inefficient sol for this prob, space comp O(n)
     public static int countingValleys2(int steps, String path){

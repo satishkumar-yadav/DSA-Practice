@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class MarcCakewalk {
+public class MarcCakewalk36 {
     public static long marcsCakewalk(List<Integer> calorie) {
         Collections.sort(calorie);
       long totalMiles=0;

@@ -1,4 +1,4 @@
-public class SherlockAndSquares {
+public class SherlockAndSquares43 {
     public static int squares3(int a, int b) {
         int count=0;
         int m=a;

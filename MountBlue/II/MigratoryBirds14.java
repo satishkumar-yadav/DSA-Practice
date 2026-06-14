@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class MigratoryBirds {
+public class MigratoryBirds14 {
      public static int migratoryBirds(List<Integer> arr) {
          int[] freq = new int[6]; // since bird's ids are only 1,2,3,4,5
 

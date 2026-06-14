@@ -4,7 +4,7 @@ public class ArrayRotation {
     public static void rotate(int[] nums, int k) {
         int n = nums.length;
         // Handle cases where k > array length
-        k %= n;
+        k %= n;   //k = k % n  - for handling k>n  i.e. k=12, n=5 ,  k=12%5 = 2
         if (k == 0)
             return;
 
