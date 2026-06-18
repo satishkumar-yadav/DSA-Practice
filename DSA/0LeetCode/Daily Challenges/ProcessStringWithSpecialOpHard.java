@@ -1,5 +1,5 @@
 /*
-17-Jun-26
+17-Jun-26 - NS
 3614: Process String With Special Operations
 
 */
@@ -36,10 +36,11 @@ public class ProcessStringWithSpecialOpHard {
     public static void main(String[] args) {
         // String s = "a#b%*";
        // String s = "z*#";
-        String s = "a#b%*"; // k = 1  //a
+        //String s = "a#b%*"; // k = 1  //a
         //String s = "cd%#*#"; // k = 3 //d
          // String s = "z*#"; // k = 0
-        int k=1;
+        String s = "%#bz%xum##i##vzo#pwc*#dkwbh####%uf%s*%cgppqhqa%h#l##o%ij%%cz%iga##e###u%#e####jfwx##%%*x%m*%#";
+        int k= 6523;
 
         System.out.println(processStr(s,k));
     }
