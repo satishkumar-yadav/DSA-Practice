@@ -17,6 +17,26 @@ Note: This question is the same as 2287: Rearrange Characters to Make Target Str
 
 public class EMaximumNumberOfBalloons {
     public static int maxNumberOfBalloons(String text) {
+           int[] counts = new int[26];//only dealing with lowercase english letters
+
+           //counting freq of all char in text
+           for (int i = 0; i < text.length(); i++) counts[text.charAt(i)-'a']++;
+           
+           //Retrieving counts for individual parts of balloon
+           int bCount = counts['b'-'a'];
+           int aCount = counts['a'-'a'];
+           int lCount = counts['l'-'a']/2; //needs 2 'l's per word
+           int oCount = counts['o'-'a']/2;
+           int nCount = counts['n'-'a'];
+
+           //finding limiting factor(the minimum count)
+           int maxBalloons = bCount;
+           maxBalloons = Math.min(maxBalloons, aCount);
+           maxBalloons = Math.min(maxBalloons, lCount);
+           maxBalloons = Math.min(maxBalloons, oCount);
+           maxBalloons = Math.min(maxBalloons, nCount);
+
+           return maxBalloons;
 
     }
 
