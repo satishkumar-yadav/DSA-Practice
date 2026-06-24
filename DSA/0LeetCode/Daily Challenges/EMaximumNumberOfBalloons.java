@@ -23,15 +23,15 @@ public class EMaximumNumberOfBalloons {
            for (int i = 0; i < text.length(); i++) counts[text.charAt(i)-'a']++;
            
            //Retrieving counts for individual parts of balloon
-           int bCount = counts['b'-'a'];
-           int aCount = counts['a'-'a'];
-           int lCount = counts['l'-'a']/2; //needs 2 'l's per word
-           int oCount = counts['o'-'a']/2;
-           int nCount = counts['n'-'a'];
+           int bCount = counts['b'-'a'];  //2
+           int aCount = counts['a'-'a'];  //2
+           int lCount = counts['l'-'a']/2; //needs 2 'l's per word   //4/2=2
+           int oCount = counts['o'-'a']/2; // 4/2=2
+           int nCount = counts['n'-'a'];  //2
 
            //finding limiting factor(the minimum count)
-           int maxBalloons = bCount;
-           maxBalloons = Math.min(maxBalloons, aCount);
+           int maxBalloons = bCount;   //2
+           maxBalloons = Math.min(maxBalloons, aCount); //
            maxBalloons = Math.min(maxBalloons, lCount);
            maxBalloons = Math.min(maxBalloons, oCount);
            maxBalloons = Math.min(maxBalloons, nCount);
@@ -46,5 +46,7 @@ public class EMaximumNumberOfBalloons {
        // String text = "leetcode"; //0
 
         System.out.println(maxNumberOfBalloons(text));
+
+       // System.out.println('b'-'a');
     }
 }
