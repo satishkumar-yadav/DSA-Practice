@@ -7,7 +7,7 @@ public class AppendAndDelete64 {
     public static String appendAndDelete(String s, String t, int k) {
         int sLen = s.length();
         int tLen = t.length();
-
+ 
         int commonLength = 0;
         int minLength = Math.min(sLen, tLen);
 
