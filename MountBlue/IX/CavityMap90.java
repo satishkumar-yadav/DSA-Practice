@@ -28,7 +28,7 @@ public class CavityMap90 {
                char right = grid.get(i).charAt(j+1);
 
                //check if current cell is strictly deeper than all 4 neighbours
-               if(current>top && current>bottom && current>left && current>right) matrix[i][i]= 'X'; // mark cavity in mutable matrix
+               if(current>top && current>bottom && current>left && current>right) matrix[i][j]= 'X'; // mark cavity in mutable matrix
           }
       }
 
