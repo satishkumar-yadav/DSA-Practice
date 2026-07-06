@@ -135,7 +135,7 @@ public class CountingSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = {4,2,2,8,3,3,1};
+        int[] arr = {4,2,2,8,3,3,1,78,99,53,9,9,0,78,46,999,445,9887656,877};
         System.out.println(Arrays.toString(arr));
 
         countingSort(arr);
