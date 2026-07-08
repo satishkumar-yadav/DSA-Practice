@@ -1,8 +1,7 @@
 /*
-06-July-26
+06-July-26   ->   07-July-26
 */
 
-//1 test case fails
 class TheTimeInWords111 {
     public static String timeInWords(int h, int m) {
         String[] words = {"zero","one","two","three","four","five","six","seven","eight","nine","ten",
@@ -16,7 +15,7 @@ class TheTimeInWords111 {
 
         if (m == 30)  return "half past " + words[h];
 
-        if (m == 45)  return "quarter to " + words[h];
+        if (m == 45)  return "quarter to " + words[h+1];
 
         if (m == 1)  return "one minute past " + words[h];
 
@@ -30,7 +29,7 @@ class TheTimeInWords111 {
 
     public static void main(String[] args) {
         int h= 5;
-        int m = 47;
+        int m = 45;
 
         System.out.println(timeInWords(h, m));
 
